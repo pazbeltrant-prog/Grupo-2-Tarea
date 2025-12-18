@@ -1,0 +1,113 @@
+/* ============================= */
+/* ESTILOS GENERALES DEL SITIO   */
+/* ============================= */
+
+body {
+  background-color: #f9f9f9;
+  font-family: "Arial", sans-serif;
+}
+
+/* Fuente externa */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+/* ============================= */
+/* BARRA DE BÚSQUEDA EXPANDIBLE */
+/* ============================= */
+
+.search-input {
+  width: 0;
+  padding: 0;
+  opacity: 0;
+  transition: width 0.4s ease, padding 0.4s ease, opacity 0.4s ease;
+  cursor: pointer;
+}
+
+/* Cuando el formulario tiene la clase search-expanded */
+.search-expanded .search-input {
+  width: 250px;
+  padding-left: 1rem;
+  padding-right: 2.5rem;
+  opacity: 1;
+  cursor: text;
+}
+
+.btn-search-icon {
+  z-index: 10;
+  cursor: pointer;
+}
+
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #009fe3 !important;
+}
+
+/* ============================= */
+/* TARJETAS DE PRODUCTO */
+/* ============================= */
+
+.product-card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* ============================= */
+/* FAVORITOS (CORAZÓN) */
+/* ============================= */
+
+.btn-fav {
+  transition: color 0.2s ease, transform 0.2s;
+}
+
+.btn-fav:hover {
+  transform: scale(1.2);
+}
+
+/* Favorito activo */
+.fav-active {
+  color: #dc3545 !important;
+}
+
+/* Favorito inactivo */
+.fav-inactive {
+  color: #6c757d !important;
+}
+
+/* ============================= */
+/* DROPDOWN DE FAVORITOS */
+/* ============================= */
+
+/* Miniatura del producto */
+.fav-thumbnail {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+/* Botón eliminar (❌) dentro del dropdown */
+.btn-remove-fav {
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Efecto hover del botón eliminar */
+.btn-remove-fav:hover {
+  transform: scale(1.2);
+  color: #dc3545;
+}
